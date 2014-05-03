@@ -134,7 +134,7 @@ class: center, middle, inverse
 ---
 layout: false
 ## Funktionsprinzip VoIP
-![FFunktionsprinzip_VoIP](Funktionsprinzip_VoIP.png)
+![Funktionsprinzip_VoIP](Funktionsprinzip_VoIP.png)
 ---
 ## Peer2Peer
 ![Peer2Peer](peer2peer.png)
@@ -145,28 +145,47 @@ layout: false
 
 - "noch" Peer2Peer - Fallback Relay Server
 
----
-## Skype
-
-Vorteile:
-
-Nachteile:
+- Echo Cancellation und Auto Gain deaktivieren 
 
 ---
 ## Mumble
 
-### Vorteile:
+- Server/Client Architektur
 
-### Nachteile:
+- Verschlüsselter Medienstrom 
 
-- Eigener Server notwendig
 ---
 ## SIP / Studio Connect
+
+- Peer2Peer oder Server/Client oder beides ;-)
+
+- Probleme mit IPv4 NAT
+  - Lösung in Sicht: ICE (STUN, TURN [Relay Server])
+  - SIP outbound
+  - IPv6
+
+- Studio Connect SIP Proxy im Aufbau (mit Soße und Scharf)
+
+- SIP am besten mit TLS verwenden
 ---
 ## Priorisierung (QoS)
+
+- In LAN auf jeden Fall sinnvoll
+
+- Die Holzhammermethode - auf IP Basis
+
+- Besser nur IP/UDP Kombination
+
 ---
+## Qualität ermitteln
+
+- Normale Speedtests - i.d.R. wenig aussagekräftig
+
+- Besser ping und iperf
+
+- Funkverbindungen sind häufig auch ein Problem
     </textarea>
-    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="remark-latest.min.js" type="text/javascript"></script>
     <script type="text/javascript">
       var hljs = remark.highlighter.engine;
     </script>
